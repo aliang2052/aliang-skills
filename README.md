@@ -95,7 +95,7 @@ AI 会按技能内置的流程分步执行，关键节点暂停等你确认。
 
 - 文生图 / TTS 价格较低；**图生视频较贵**。
 - `aliang-shortvideo` 的"图生视频"阶段默认**只产出命令、不自动付费生成**，需你显式确认要为哪段付费后才会真正生成。请放心试用前面的免费/低价阶段。
-- 具体计费以[阿里云百炼官方定价](https://help.aliyun.com/zh/model-studio/billing-overview)为准。
+- 各模型实时单价以[阿里云百炼官方定价页](https://help.aliyun.com/zh/model-studio/model-pricing)为准（文生图 / TTS / 视频生成等分模型计价）。
 
 ---
 
