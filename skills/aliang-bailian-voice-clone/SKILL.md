@@ -1,5 +1,5 @@
 ---
-name: bailian-voice-clone
+name: aliang-bailian-voice-clone
 description: 使用百炼已创建的克隆音色（CosyVoice v3.5-flash）通过 bl speech synthesize 合成语音。
 ---
 

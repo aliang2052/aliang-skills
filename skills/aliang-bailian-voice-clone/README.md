@@ -1,4 +1,4 @@
-# bailian-voice-clone · 百炼克隆音色语音合成
+# aliang-bailian-voice-clone · 百炼克隆音色语音合成
 
 ## 干什么
 
@@ -11,7 +11,7 @@
 需先安装百炼 CLI（见[仓库根 README](../../README.md#-前置依赖安装百炼-cli)），然后：
 
 ```bash
-cp -R bailian-voice-clone ~/.claude/skills/
+cp -R aliang-bailian-voice-clone ~/.claude/skills/
 ```
 
 ## ⚠️ 使用前：先创建你自己的克隆音色

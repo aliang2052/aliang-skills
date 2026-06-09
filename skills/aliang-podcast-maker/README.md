@@ -1,4 +1,4 @@
-# podcast-maker · 多人对话播客制作
+# aliang-podcast-maker · 多人对话播客制作
 
 ## 干什么
 
@@ -16,7 +16,7 @@
 需先安装百炼 CLI（见[仓库根 README](../../README.md#-前置依赖安装百炼-cli)）和 `ffmpeg`（拼接音频用），然后：
 
 ```bash
-cp -R podcast-maker ~/.claude/skills/
+cp -R aliang-podcast-maker ~/.claude/skills/
 ```
 
 ## 如何使用

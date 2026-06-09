@@ -4,7 +4,7 @@
 > 把"做短剧、做电商图、做儿童故事、做有声绘本、做播客、做配音"这些 AIGC 流程，
 > 固化成可一句话触发的技能 —— 你只管说要什么，AI 自动走完整流程。
 
-全部技能共用一个底座：阿里云百炼的文生图 / 图生视频 / TTS / 多模态能力。安装一次 `bl`，七个技能全部可用。
+全部技能共用一个底座：阿里云百炼的文生图 / 图生视频 / TTS / 多模态能力。安装一次 `bl`，六个技能全部可用。
 
 ---
 
@@ -16,9 +16,8 @@
 | [**aliang-product-detail-photos**](skills/aliang-product-detail-photos) | 产品图去背景 + 生成多角度/多场景电商详情图 | "做商品详情图""电商主图""去掉背景" |
 | [**aliang-kids-story-maker**](skills/aliang-kids-story-maker) | 按年龄/时长生成儿童故事，并配音 + 配插图 | "制作儿童故事""睡前故事" |
 | [**aliang-picturebook-audiobook**](skills/aliang-picturebook-audiobook) | 故事主题 → 有声绘本：多音色配音 + 统一画风配图 + 网页/视频/音频 | "做有声绘本""把故事做成有声书" |
-| [**aliang-tts**](skills/aliang-tts) | 用克隆音色把文字 / txt / 飞书文档播报成语音 | "用我的声音读一下""文字转语音" |
-| [**podcast-maker**](skills/podcast-maker) | 多人对话脚本 → 分角色配音 → ffmpeg 拼成完整播客 | "把这段对话做成播客""配音" |
-| [**bailian-voice-clone**](skills/bailian-voice-clone) | 用百炼克隆音色（CosyVoice v3.5）合成语音 | "克隆声音合成""TTS" |
+| [**aliang-podcast-maker**](skills/aliang-podcast-maker) | 多人对话脚本 → 分角色配音 → ffmpeg 拼成完整播客 | "把这段对话做成播客""配音" |
+| [**aliang-bailian-voice-clone**](skills/aliang-bailian-voice-clone) | 用百炼克隆音色（CosyVoice v3.5）合成语音 | "克隆声音合成""TTS" |
 
 > 💡 每个技能目录下都有独立的 README，写清了它的功能、安装和用法。
 
@@ -101,7 +100,7 @@ AI 会按技能内置的流程分步执行，关键节点暂停等你确认。
 
 ## ⚠️ 关于克隆音色
 
-`aliang-tts` 和 `bailian-voice-clone` 用到的克隆音色 ID 是**个人百炼账号私有资源，无法共享**。
+`aliang-bailian-voice-clone` 用到的克隆音色 ID 是**个人百炼账号私有资源，无法共享**。
 仓库里相关 ID 已替换为占位符（`cosyvoice-v3.5-flash-YOUR_xxx_VOICE_ID`）。
 使用前请在[百炼控制台](https://bailian.console.aliyun.com/)创建你自己的克隆音色，再把占位符换成你的真实 ID。
 普通系统音色（如 `longanwen_v3` 等）无需克隆，开箱即用。

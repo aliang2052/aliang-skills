@@ -1,5 +1,5 @@
 ---
-name: podcast-maker
+name: aliang-podcast-maker
 description: 多人对话脚本转语音播客：为不同角色分配音色，逐句生成后用 ffmpeg 拼接成完整音频。
 ---
 
