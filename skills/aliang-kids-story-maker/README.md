@@ -1,5 +1,9 @@
 # aliang-kids-story-maker · 儿童故事制作
 
+<p align="center">
+  <img src="../../assets/demo-kids-story.jpg" width="380" alt="儿童故事插图 demo" />
+</p>
+
 ## 干什么
 
 按孩子年龄和时长，一条龙做出**儿童故事 + 配音 + 插图**：

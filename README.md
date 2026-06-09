@@ -10,12 +10,32 @@
 
 ## 🎬 效果展示
 
-> `aliang-shortvideo` 一句话灵感生成的短剧成片（节选）：
+**`aliang-shortvideo`** —— 一句话灵感生成的短剧成片（节选）：
 
 <p align="center">
-  <img src="assets/aliang-shortvideo-1.gif" width="240" alt="短剧 demo：末日清道夫" />
+  <img src="assets/aliang-shortvideo-1.gif" width="220" alt="短剧 demo：末日清道夫" />
   &nbsp;&nbsp;
-  <img src="assets/aliang-shortvideo-2.gif" width="240" alt="短剧 demo：原子天堂" />
+  <img src="assets/aliang-shortvideo-2.gif" width="220" alt="短剧 demo：原子天堂" />
+</p>
+
+**`aliang-product-detail-photos`** —— 一张实拍图 → 一组多场景/多设计的电商图：
+
+<p align="center">
+  <img src="assets/demo-ecommerce-before.jpg" width="180" alt="电商：实拍源图" />
+  &nbsp;➜&nbsp;
+  <img src="assets/demo-ecommerce-after.jpg" width="380" alt="电商：生成的设计/场景图" />
+</p>
+
+**`aliang-picturebook-audiobook`** —— 故事主题生成的儿童有声绘本（动画节选）：
+
+<p align="center">
+  <img src="assets/demo-picturebook.gif" width="420" alt="有声绘本动画 demo" />
+</p>
+
+**`aliang-kids-story-maker`** —— 配套生成的故事插图：
+
+<p align="center">
+  <img src="assets/demo-kids-story.jpg" width="360" alt="儿童故事插图 demo" />
 </p>
 
 ---

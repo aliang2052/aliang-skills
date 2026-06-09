@@ -11,3 +11,6 @@ output/
 .DS_Store
 __pycache__/
 *.pyc
+
+# 放行展示素材
+!assets/**

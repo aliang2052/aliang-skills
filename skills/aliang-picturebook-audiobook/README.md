@@ -1,5 +1,9 @@
 # aliang-picturebook-audiobook · 儿童有声绘本制作
 
+<p align="center">
+  <img src="../../assets/demo-picturebook.gif" width="440" alt="有声绘本动画 demo" />
+</p>
+
 ## 干什么
 
 给一个故事主题，做成一本**有声绘本**：

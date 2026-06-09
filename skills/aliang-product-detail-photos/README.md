@@ -1,5 +1,11 @@
 # aliang-product-detail-photos · 电商商品详情图生成
 
+<p align="center">
+  <img src="../../assets/demo-ecommerce-before.jpg" width="170" alt="实拍源图" />
+  &nbsp;➜&nbsp;
+  <img src="../../assets/demo-ecommerce-after.jpg" width="380" alt="生成的设计/场景图" />
+</p>
+
 ## 干什么
 
 把一张普通产品图，做成一套专业的电商详情图：
