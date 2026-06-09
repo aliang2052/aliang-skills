@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>__TITLE__ · 有声绘本</title>
+<style>
+  :root{ --ink:#4a3b32; --cream:#fff8ee; --accent:#f4a259; --soft:#fce8d4; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ height:100%; }
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:radial-gradient(circle at 50% 0%, #fff5e6 0%, #ffe7c7 60%, #f6d8b0 100%);
+    color:var(--ink); display:flex; align-items:center; justify-content:center;
+    min-height:100vh; padding:24px;
+  }
+  .book{ width:min(880px,100%); background:var(--cream);
+    border-radius:28px; box-shadow:0 24px 60px rgba(120,80,40,.25); overflow:hidden; position:relative; }
+  .cover{ padding:56px 40px; text-align:center; }
+  .cover h1{ font-size:38px; letter-spacing:2px; margin-bottom:14px; }
+  .cover .sub{ color:#a87f5c; font-size:15px; margin-bottom:28px; }
+  .cast{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:34px; }
+  .cast span{ background:var(--soft); padding:7px 16px; border-radius:999px; font-size:13px; }
+  .btn{ border:none; cursor:pointer; font-size:16px; font-weight:600;
+    background:var(--accent); color:#fff; padding:14px 34px; border-radius:999px;
+    box-shadow:0 8px 20px rgba(244,162,89,.45); transition:transform .15s; }
+  .btn:active{ transform:scale(.96); }
+  .reader{ display:none; }
+  .stage{ position:relative; aspect-ratio:16/9; background:#000; overflow:hidden; }
+  .stage img{ width:100%; height:100%; object-fit:cover; display:block;
+    opacity:0; transition:opacity .6s ease; position:absolute; inset:0; }
+  .stage img.on{ opacity:1; }
+  .caption{ position:absolute; left:0; right:0; bottom:0; padding:46px 30px 22px;
+    background:linear-gradient(to top, rgba(40,25,15,.82) 30%, transparent);
+    color:#fff; font-size:20px; line-height:1.7; letter-spacing:.5px; }
+  .speaker{ display:inline-block; font-size:12px; background:var(--accent);
+    color:#fff; padding:3px 12px; border-radius:999px; margin-bottom:10px; }
+  .controls{ display:flex; align-items:center; gap:14px; padding:16px 22px; }
+  .ctrl{ border:none; background:var(--soft); width:46px; height:46px; border-radius:50%;
+    cursor:pointer; font-size:18px; display:grid; place-items:center; transition:background .15s; }
+  .ctrl:hover{ background:#f7d9b3; }
+  .ctrl.play{ background:var(--accent); color:#fff; width:56px; height:56px; font-size:22px; }
+  .progress{ flex:1; height:8px; background:var(--soft); border-radius:999px; overflow:hidden; }
+  .progress i{ display:block; height:100%; width:0; background:var(--accent); transition:width .25s; }
+  .pageno{ font-size:13px; color:#a87f5c; min-width:42px; text-align:right; }
+  .dots{ display:flex; gap:7px; justify-content:center; padding:0 0 18px; }
+  .dots b{ width:9px; height:9px; border-radius:50%; background:#e7cba6; cursor:pointer; transition:all .2s; }
+  .dots b.on{ background:var(--accent); transform:scale(1.3); }
+  .auto{ position:absolute; top:14px; right:16px; font-size:12px; color:#fff;
+    background:rgba(0,0,0,.4); padding:5px 12px; border-radius:999px; cursor:pointer; user-select:none; }
+</style>
+</head>
+<body>
+<div class="book">
+  <section class="cover" id="cover">
+    <h1 id="title">书名</h1>
+    <div class="sub">AI 有声绘本 · 多音色朗读 · 由百炼 bl 生成</div>
+    <div class="cast" id="cast"></div>
+    <button class="btn" id="startBtn">▶ 开始听故事</button>
+  </section>
+  <section class="reader" id="reader">
+    <div class="stage" id="stage">
+      <div class="auto" id="autoToggle">自动连播：开</div>
+      <div class="caption"><span class="speaker" id="speaker"></span><div id="text"></div></div>
+    </div>
+    <div class="controls">
+      <button class="ctrl" id="prev">‹</button>
+      <button class="ctrl play" id="play">▶</button>
+      <button class="ctrl" id="next">›</button>
+      <div class="progress"><i id="bar"></i></div>
+      <div class="pageno" id="pageno">1/1</div>
+    </div>
+    <div class="dots" id="dots"></div>
+    <audio id="audio"></audio>
+  </section>
+</div>
+<script>
+const DATA = /*__DATA__*/;
+const pad = n => String(n).padStart(2,'0');
+const $ = id => document.getElementById(id);
+let i = 0, autoplay = true;
+$('title').textContent = DATA.title;
+DATA.characters.forEach(c=>{ const s=document.createElement('span'); s.textContent=`${c.name}·${c.trait}`; $('cast').appendChild(s); });
+const imgs = DATA.segments.map(s=>{ const im=new Image(); im.src=`images/seg_${pad(s.id)}.png`; $('stage').prepend(im); return im; });
+DATA.segments.forEach((s,idx)=>{ const b=document.createElement('b'); b.onclick=()=>go(idx); $('dots').appendChild(b); });
+const audio=$('audio');
+function render(){
+  const s=DATA.segments[i];
+  imgs.forEach((im,idx)=>im.classList.toggle('on',idx===i));
+  $('speaker').textContent=s.speaker; $('text').textContent=s.text;
+  $('pageno').textContent=`${i+1}/${DATA.segments.length}`;
+  [...$('dots').children].forEach((b,idx)=>b.classList.toggle('on',idx===i));
+  audio.src=`audio/seg_${pad(s.id)}.wav`;
+}
+function go(n){ i=Math.max(0,Math.min(DATA.segments.length-1,n)); render(); audio.play(); }
+$('startBtn').onclick=()=>{ $('cover').style.display='none'; $('reader').style.display='block'; go(0); };
+$('prev').onclick=()=>go(i-1);
+$('next').onclick=()=>go(i+1);
+$('play').onclick=()=>{ audio.paused?audio.play():audio.pause(); };
+audio.onplay =()=>$('play').textContent='⏸';
+audio.onpause=()=>$('play').textContent='▶';
+audio.ontimeupdate=()=>{ if(audio.duration) $('bar').style.width=(audio.currentTime/audio.duration*100)+'%'; };
+audio.onended=()=>{ if(autoplay && i<DATA.segments.length-1) go(i+1); };
+$('autoToggle').onclick=()=>{ autoplay=!autoplay; $('autoToggle').textContent='自动连播：'+(autoplay?'开':'关'); };
+document.addEventListener('keydown',e=>{
+  if($('reader').style.display==='none')return;
+  if(e.key==='ArrowRight')go(i+1);
+  if(e.key==='ArrowLeft')go(i-1);
+  if(e.key===' '){e.preventDefault(); $('play').click();}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# 产物 / 临时
+输出/
+output/
+*.mp3
+*.mp4
+*.wav
+*.png
+*.jpg
+*.jpeg
+!skills/**/assets/**
+.DS_Store
+__pycache__/
+*.pyc
