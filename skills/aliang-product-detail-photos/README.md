@@ -26,7 +26,7 @@ cp -R aliang-product-detail-photos ~/.claude/skills/
 
 ## 如何使用
 
-在 Claude Code 里说，例如：
+对你的 AI 助手说，例如：
 
 ```
 帮我把这张产品图（./保温杯.jpg）做成 5 张电商详情图，3:4 竖图，简约风

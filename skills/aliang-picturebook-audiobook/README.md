@@ -30,7 +30,7 @@ cp -R aliang-picturebook-audiobook ~/.claude/skills/
 
 ## 如何使用
 
-在 Claude Code 里说，例如：
+对你的 AI 助手说，例如：
 
 ```
 把「小狐狸找月亮」做成有声绘本，6 段，水彩画风，再导出一个视频版

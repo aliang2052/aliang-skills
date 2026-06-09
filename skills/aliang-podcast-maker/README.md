@@ -21,7 +21,7 @@ cp -R aliang-podcast-maker ~/.claude/skills/
 
 ## 如何使用
 
-把对话脚本丢给 Claude Code，例如：
+把对话脚本丢给你的 AI 助手，例如：
 
 ```
 把下面这段对话做成播客（阿琳活泼、老陈沉稳）：

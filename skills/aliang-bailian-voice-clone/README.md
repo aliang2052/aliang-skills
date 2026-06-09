@@ -22,7 +22,7 @@ cp -R aliang-bailian-voice-clone ~/.claude/skills/
 
 ## 如何使用
 
-在 Claude Code 里说"用克隆音色合成……"，或直接用命令：
+对你的 AI 助手说"用克隆音色合成……"，或直接用命令：
 
 ```bash
 bl speech synthesize \

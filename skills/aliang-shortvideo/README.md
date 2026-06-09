@@ -29,7 +29,7 @@ cp -R aliang-shortvideo ~/.claude/skills/
 
 ## 如何使用
 
-在 Claude Code 里直接说，例如：
+对你的 AI 助手直接说，例如：
 
 ```
 做个短剧，灵感是「外卖小哥其实是隐藏的修仙者」，悬疑反转，竖版 30 秒

@@ -1,6 +1,6 @@
 # aliang-skills · 阿亮开源的 AI 创作技能合集
 
-> 阿亮开源的一套 [Claude Code](https://claude.com/claude-code) / Agent Skills，
+> 阿亮开源的一套 **Agent Skills**（AI Agent 技能），任何支持 Skill 的 AI 助手都能用。
 > 把"做短剧、做电商图、做儿童故事、做有声绘本、做播客、做配音"这些 AIGC 流程，
 > 固化成可一句话触发的技能 —— 你只管说要什么，AI 自动走完整流程。
 
@@ -82,7 +82,7 @@ brew install ffmpeg     # macOS
 
 ## 📥 安装技能
 
-技能就是一个个目录，放进 Claude Code 的技能目录即可被自动识别。
+技能就是一个个目录，放进你的 AI 助手的 Skill 目录即可被自动识别。
 
 ### 方式一：全部安装（推荐）
 
@@ -98,15 +98,15 @@ cp -R aliang-skills/skills/* ~/.claude/skills/
 cp -R aliang-skills/skills/aliang-shortvideo ~/.claude/skills/
 ```
 
-装好后，在 Claude Code 里输入 `/` 或直接说出触发词，对应技能就会被调用。
+装好后，在你的 AI 助手里直接说出触发词，对应技能就会被调用。
 
-> 其他支持 Agent Skills 规范的客户端（如 `.qwen/skills`、`.agents/skills`），把目录放到对应位置同样可用。
+> 上面的 `~/.claude/skills` 只是一个常见示例。其他支持 Agent Skills 规范的客户端（如 `~/.qwen/skills`、`~/.agents/skills` 等），把技能目录放到对应位置同样可用。
 
 ---
 
 ## 🚀 如何使用
 
-安装后**无需记命令**，直接用自然语言对 Claude Code 说话即可。例如：
+安装后**无需记命令**，直接用自然语言对你的 AI 助手说即可。例如：
 
 ```
 做个短剧，灵感是「外卖小哥其实是隐藏的修仙者」，竖版 30 秒

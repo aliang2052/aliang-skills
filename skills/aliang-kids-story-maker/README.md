@@ -25,7 +25,7 @@ cp -R aliang-kids-story-maker ~/.claude/skills/
 
 ## 如何使用
 
-在 Claude Code 里说，例如：
+对你的 AI 助手说，例如：
 
 ```
 给 5 岁的孩子做一个 3 分钟的睡前故事，温柔妈妈的声音，要配音和插图
