@@ -1,10 +1,22 @@
-# aliang-skills · 百炼 AI 创作技能包
+# aliang-skills · 阿亮开源的 AI 创作技能合集
 
-> 一套基于 **阿里云百炼 CLI（`bl`）** 的 [Claude Code](https://claude.com/claude-code) / Agent Skills 合集。
+> 阿亮开源的一套 [Claude Code](https://claude.com/claude-code) / Agent Skills，
 > 把"做短剧、做电商图、做儿童故事、做有声绘本、做播客、做配音"这些 AIGC 流程，
 > 固化成可一句话触发的技能 —— 你只管说要什么，AI 自动走完整流程。
 
-全部技能共用一个底座：阿里云百炼的文生图 / 图生视频 / TTS / 多模态能力。安装一次 `bl`，六个技能全部可用。
+安装一次依赖，六个技能全部可用。
+
+---
+
+## 🎬 效果展示
+
+> `aliang-shortvideo` 一句话灵感生成的短剧成片（节选）：
+
+<p align="center">
+  <img src="assets/aliang-shortvideo-1.gif" width="240" alt="短剧 demo：末日清道夫" />
+  &nbsp;&nbsp;
+  <img src="assets/aliang-shortvideo-2.gif" width="240" alt="短剧 demo：原子天堂" />
+</p>
 
 ---
 

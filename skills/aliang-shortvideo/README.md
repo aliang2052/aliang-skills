@@ -1,5 +1,11 @@
 # aliang-shortvideo · 短剧全流程制作
 
+<p align="center">
+  <img src="../../assets/aliang-shortvideo-1.gif" width="240" alt="短剧 demo：末日清道夫" />
+  &nbsp;&nbsp;
+  <img src="../../assets/aliang-shortvideo-2.gif" width="240" alt="短剧 demo：原子天堂" />
+</p>
+
 ## 干什么
 
 把**一句话灵感**逐步做成可拍/可播的短剧，五阶段流水线：
