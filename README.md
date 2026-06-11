@@ -44,12 +44,12 @@
 
 | 技能 | 干什么 | 触发词示例 |
 |------|--------|-----------|
-| [**aliang-shortvideo**](skills/aliang-shortvideo) | 一句话灵感 → 短剧成片：大纲→剧本→分镜→批量出图→图生视频 | "做个短剧""把这个点子做成短剧" |
+| [**aliang-shortvideo**](skills/aliang-shortvideo) | 一句话灵感 → 短剧成片：大纲→剧本→分镜→出图→图生视频 | "做个短剧""把这个点子做成短剧" |
 | [**aliang-product-detail-photos**](skills/aliang-product-detail-photos) | 产品图去背景 + 生成多角度/多场景电商详情图 | "做商品详情图""电商主图""去掉背景" |
 | [**aliang-kids-story-maker**](skills/aliang-kids-story-maker) | 按年龄/时长生成儿童故事，并配音 + 配插图 | "制作儿童故事""睡前故事" |
 | [**aliang-picturebook-audiobook**](skills/aliang-picturebook-audiobook) | 故事主题 → 有声绘本：多音色配音 + 统一画风配图 + 网页/视频/音频 | "做有声绘本""把故事做成有声书" |
 | [**aliang-podcast-maker**](skills/aliang-podcast-maker) | 多人对话脚本 → 分角色配音 → ffmpeg 拼成完整播客 | "把这段对话做成播客""配音" |
-| [**aliang-bailian-voice-clone**](skills/aliang-bailian-voice-clone) | 用百炼克隆音色（CosyVoice v3.5）合成语音 | "克隆声音合成""TTS" |
+| [**aliang-bailian-voice-clone**](skills/aliang-bailian-voice-clone) | 用百炼 CosyVoice v3.5 合成语音 | "声音合成""TTS" |
 
 > 💡 每个技能目录下都有独立的 README，写清了它的功能、安装和用法。
 
@@ -130,12 +130,12 @@ AI 会按技能内置的流程分步执行，关键节点暂停等你确认。
 
 ---
 
-## ⚠️ 关于克隆音色
+## ⚠️ 关于音色
 
-`aliang-bailian-voice-clone` 用到的克隆音色 ID 是**个人百炼账号私有资源，无法共享**。
+`aliang-bailian-voice-clone` 用到的音色 ID 是**个人百炼账号私有资源，无法共享**。
 仓库里相关 ID 已替换为占位符（`cosyvoice-v3.5-flash-YOUR_xxx_VOICE_ID`）。
-使用前请在[百炼控制台](https://bailian.console.aliyun.com/)创建你自己的克隆音色，再把占位符换成你的真实 ID。
-普通系统音色（如 `longanwen_v3` 等）无需克隆，开箱即用。
+使用前请在[百炼控制台](https://bailian.console.aliyun.com/)创建你自己的音色，再把占位符换成你的真实 ID。
+普通系统音色（如 `longanwen_v3` 等）开箱即用。
 
 ---
 
